@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class calculator {
+
+	public static void main(String[] args) {
+		System.out.println("Hello");
+		Scanner scnr = new Scanner(System.in);
+		String mode;
+		String operator = null;
+		double numOne = 0;
+		double numTwo = 0;
+		double numThree = 0;
+		//double keyboard;
+		//double result = 0;
+		// asking the the user to choose mode
+		System.out.print("Enter the calculator mode: Standard/Scientific?");
+		mode = scnr.nextLine();
+		while (!mode.contentEquals("Quit")) {
+			if (mode.equals("Standard")) {
+				System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division");
+				operator = scnr.nextLine();		
+			}
+			if (operator.contentEquals("+")) {
+				//System.out.println("how many numbers would you like to add");
+				Scanner Usernum = new Scanner(System.in);
+				System.out.println("Enter the numbers you would like to add");
+				System.out.println("Then press enter 0 enter to get your answer");
+				//Scanner Userinput = new Scanner (System.in);
+				int sum = 0;
+				while (true) {
+					int number = Usernum.nextInt();
+					if (number == 0) break;
+					sum = sum += number;
+				}
+			
+				System.out.println(+ sum);
+				
+			}
+		}
+		
+		
+		
+
+	}
+
+}
